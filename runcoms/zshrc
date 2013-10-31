@@ -12,3 +12,153 @@ fi
 
 # Customize to your needs...
 
+##############################################################################
+
+# I got this from https://github.com/mattjj/my-oh-my-zsh/blob/master/history.zsh
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_BEEP                 # Beep when accessing nonexistent history.
+
+# ls shortcuts
+alias dir=ls
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -l'
+alias lla='ls -la'
+alias lld='ls -ld */'
+alias lsx="find . -type f | sed -e 's/.*\.//' | sort | uniq -c | sort -rn"
+# date shortcuts
+alias gmt="date -u"
+alias utc='date -u'
+# git
+alias wip='git add .; git commit -m "wip"'
+alias yolo='git push --force'
+alias gsm="grep path .gitmodules | sed 's/.*= //'"
+# Janus VIM profile update
+alias jvu='pushd .; cd ~/.vim; rake; popd'
+# misc shortcuts
+alias fsize='du -ch | grep total'
+alias hig='history | grep'
+# Python
+alias mkve='mkvirtualenv --python=$VIRTUALENVWRAPPER_PYTHON'
+alias yolk='python $SCRIPTS/python/yolk2.py'
+alias pf='pip freeze'
+alias pi='pip install'
+alias piu='pip install -U'
+alias pm='python manage.py'
+alias fsp='python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"'
+alias rmpyc='rmr *.pyc'
+
+# Mac OS X Specific
+if [[ "$OSTYPE" == darwin* ]]; then
+    alias ep='mate ~/Dropbox/Scripts'
+    alias mft='find . -name Makefile | xargs trash'
+    # Python 3
+    alias mkve3='mkvirtualenv --python=/usr/local/bin/python3'
+    # Site packages are located in:
+    # /usr/local/Cellar/python3/3.3.2/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages
+
+    # Growl
+    function growl {
+        echo -e $'\e]9;'$1'\007'
+    }
+
+    # Home Macbook Pro
+    if [[ `hostname -s` = "DaleHomeMachine" ]]; then
+        # Troll
+        alias troll='/Users/dale/Source/_other/Troll_2013-03-22/troll'
+        # Python aliases
+        alias mpt="paster create -t modern_package"
+        alias psql='/Applications/Postgres.app/Contents/MacOS/bin/psql'
+        # GUAPDF - Uncomment the CUDA lib path in zshenv to use the GPU-optimized version
+        # alias guapdf="/Users/dale/Tools/guapdf/guapdf-cuda"
+        alias guapdf="/Users/dale/Tools/guapdf/guapdf"
+        alias love="/Applications/love.app/Contents/MacOS/love"
+    # Work Macbook Air
+    elif [[ `hostname -s` = "Dale-Mac-LT" ]]; then
+        alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
+        alias dev1='ssh dale@xen-dale-1.ksjc.sh.colo'
+        alias dev2='ssh dale@xen-dale-2.ksjc.sh.colo'
+        alias sx='/Users/dale/Dropbox/Scripts/shell/sync_xen.sh'
+        alias mysql='/Applications/MAMP/Library/bin/mysql'
+        alias mysqladmin='/Applications/MAMP/Library/bin/mysqladmin'
+        alias rsphp='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/php-platform/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/php-platform/'
+        alias rsserp='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/web-serpng/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/web-serpng/'
+        alias rsab='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/community/ dale@xen-dale-2.ksjc.sh.colo:/home/dale/community/'
+    fi
+fi
+
+# Conversion
+function b2d() {
+    echo $((2#$1))
+}
+function o2d() {
+    echo $((8#$1))
+}
+function h2d() {
+    echo $((16#$1))
+}
+# Search
+function fid {
+    find . -name $1 -print
+}
+# Recursive deletion of glob
+function rmr {
+    find . -name "$1" -exec rm '{}' ';'
+}
+# Figlet
+function figbanner {
+    figlet -f $1 $2 | lolcat
+}
+# Upgrade Janus VIM, Oh My Zsh, and Homebrew
+function upall {
+    figbanner crawford Janus
+    jvu
+    figbanner crawford Homebrew
+    brew update
+    brew outdated
+}
+
+# Call from .virtualenv/postactivate
+function zsh_venv_on_postactivate {
+    local virtualenv_format
+    local virtualenv_formatted
+
+    # Clean up previous $python_info.
+    unset python_info
+    typeset -gA python_info
+
+    # Format virtualenv.
+    if [[ -n "$VIRTUAL_ENV" ]]; then
+      zstyle -s ':prezto:module:python:info:virtualenv' format 'virtualenv_format'
+      zformat -f virtualenv_formatted "$virtualenv_format" "v:${VIRTUAL_ENV:t}"
+      python_info[virtualenv]="$virtualenv_formatted"
+    fi
+}
+
+# Call from .virtualenv/postdeactivate
+function zsh_venv_on_postdeactivate {
+    unset python_info
+}
+
+# virtualenvwrapper.sh can end up in several places depending on the whims of Homebrew
+# Python or the Linux distro you're using. Try to handle the most common cases.
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source /usr/local/bin/virtualenvwrapper.sh
+elif [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
+    source /usr/local/share/python/virtualenvwrapper.sh
+elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
+    source /usr/bin/virtualenvwrapper.sh
+fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

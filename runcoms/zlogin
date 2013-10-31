@@ -15,8 +15,24 @@
 } &!
 
 # Print a random, hopefully interesting, adage.
-if (( $+commands[fortune] )); then
-  fortune -a
-  print
+# if (( $+commands[fortune] )); then
+#   fortune -a
+#   print
+# fi
+
+##############################################################################
+
+if [[ "$OSTYPE" == darwin* ]]; then
+    fortune | cowsay | lolcat
 fi
 
+echo
+printf "UTC:     "
+utc
+export TZ=US/Central
+printf "Austin:  "
+date
+export TZ=US/Pacific
+printf "Local:   "
+date
+echo
