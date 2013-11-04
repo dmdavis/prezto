@@ -37,6 +37,10 @@ if [[ "$OSTYPE" == darwin* ]]; then
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
     # Java location
     export JAVA_HOME=$(/usr/libexec/java_home)
+    
+    # HandBrakeCLI, git-submodule-move etc.
+    export PATH=/Users/dale/Tools:$PATH
+    
     if [[ $HOSTNAME = "DaleHomeMachine" ]]; then
         # Moscow SML 2.10
         export PATH=/Users/dale/Tools/mosml2.10/bin:$PATH
@@ -44,8 +48,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
         export PATH=/Users/dale/Tools/mame0148-64bit:$PATH
         # Android SDK
         export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
-        # HandBrakeCLI, etc.
-        export PATH=/Users/dale/Tools:$PATH
         # CUDA - Homebrew will complain about DYLD_LIBRARY_PATH being set
         # export DYLD\_LIBRARY\_PATH=/usr/local/cuda/lib:\$DYLD\_LIBRARY\_PATH
         # GUAPDF - Uncomment the CUDA lib path above for GPU-optimized version
