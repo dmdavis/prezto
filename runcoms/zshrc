@@ -76,7 +76,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
     }
 
     # Home Macbook Pro
-    if [[ `hostname -s` = "DaleHomeMachine" ]]; then
+    if [[ `hostname -s` = "retina-pro" ]]; then
         # Troll
         alias troll='/Users/dale/Source/_other/Troll_2013-03-22/troll'
         # Python aliases
