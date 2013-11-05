@@ -32,6 +32,8 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'archive' \
+  'spectrum' \
   'fasd' \
   'git' \
   'python' \
