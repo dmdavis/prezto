@@ -19,7 +19,7 @@ alias brewC='brew cleanup --force'
 alias brewi='brew install'
 alias brewl='brew list'
 alias brews='brew search'
-alias brewu='brew upgrade'
+alias brewu='brew update'
 alias brewU='brew update && brew upgrade'
 alias brewx='brew remove'
 
