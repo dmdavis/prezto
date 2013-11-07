@@ -67,6 +67,22 @@ elif [[ "$OS" == Fedora* ]]; then
       'python' \
       'yum' \
       'prompt'
+elif [[ "$OS" == Ubuntu* ]]; then
+    zstyle ':prezto:load' pmodule \
+      'environment' \
+      'terminal' \
+      'editor' \
+      'history' \
+      'directory' \
+      'spectrum' \
+      'utility' \
+      'completion' \
+      'archive' \
+      'fasd' \
+      'git' \
+      'python' \
+      'dpkg' \
+      'prompt'
 fi
 
 #
