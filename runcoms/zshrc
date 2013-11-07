@@ -99,6 +99,18 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias rsserp='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/web-serpng/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/web-serpng/'
         alias rsab='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/community/ dale@xen-dale-2.ksjc.sh.colo:/home/dale/community/'
     fi
+elif [[ "$OS" == Fedora* ]]; then
+    # php-platform/web-serpng Shortcuts
+    alias phps='cd ~/php-platform; sudo ./run.sh'
+    alias phpx='sudo /sbin/service httpd stop'
+    alias serp='cd ~/web-serpng; workon web-serpng; /home/dale/Dropbox/Scripts/sh/run-web-serpng.sh'
+    alias tnp='tmux new -s platform'
+    alias tns='tmux new -s serpng'
+    alias tna='tmux new -s askbot'
+    alias tap='tmux a -t platform'
+    alias tas='tmux a -t serpng'
+    alias taa='tmux a -t askbot'
+    alias tls='tmux ls'
 fi
 
 # Conversion
