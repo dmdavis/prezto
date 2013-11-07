@@ -27,6 +27,11 @@ export DEFAULT_USER='dale'
 export HOSTNAME=`hostname -s`
 export PROJECT_HOME="$HOME/Source"
 
+if [[ -d $HOME/Tools ]]; then
+    # HandBrakeCLI, git-submodule-move etc.
+    export PATH=$HOME/Tools:$PATH
+fi
+
 if [[ "$OSTYPE" == darwin* ]]; then
     # Amend Python path for Homebrew PyQt
     export PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
@@ -37,9 +42,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
     export PATH=/usr/local/bin:/usr/local/sbin:$PATH
     # Java location
     export JAVA_HOME=$(/usr/libexec/java_home)
-    
-    # HandBrakeCLI, git-submodule-move etc.
-    export PATH=/Users/dale/Tools:$PATH
     
     if [[ $HOSTNAME = "DaleHomeMachine" ]]; then
         # Moscow SML 2.10
