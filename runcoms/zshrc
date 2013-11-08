@@ -92,6 +92,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
         alias dev1='ssh dale@xen-dale-1.ksjc.sh.colo'
         alias dev2='ssh dale@xen-dale-2.ksjc.sh.colo'
+        alias stgc='ssh apps-community@xen-web-staging-1.ksjc.sh.colo'
         alias sx='/Users/dale/Dropbox/Scripts/shell/sync_xen.sh'
         alias mysql='/Applications/MAMP/Library/bin/mysql'
         alias mysqladmin='/Applications/MAMP/Library/bin/mysqladmin'
