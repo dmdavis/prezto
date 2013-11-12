@@ -113,6 +113,7 @@ elif [[ "$OS" == Fedora* ]]; then
     alias phps='cd ~/php-platform; sudo ./run.sh'
     alias phpx='sudo /sbin/service httpd stop'
     alias serp='cd ~/web-serpng; workon web-serpng; /home/dale/Dropbox/Scripts/sh/run-web-serpng.sh'
+    alias askbot='cd ~/community/code/community; workon askbot; python manage.py runserver 0.0.0.0:9005'
     alias tnp='tmux new -s platform'
     alias tns='tmux new -s serpng'
     alias tna='tmux new -s askbot'
