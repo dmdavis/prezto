@@ -113,7 +113,14 @@ elif [[ "$OS" == Fedora* ]]; then
     alias tap='tmux a -t platform'
     alias tas='tmux a -t serpng'
     alias taa='tmux a -t askbot'
-
+elif [[ "$OS" == Ubuntu* ]]; then
+    alias db='~/.dropbox/dropbox.py'
+    NZ='/var/www/newznab/misc/update_scripts'
+    alias nzub='sudo php $NZ/update_binaries_threaded.php'
+    alias cdnz='cd $NZ'
+    alias dbds='sudo du -sh /mnt/lv2tb/'
+    alias tnn='tmux new -s newznab'
+    alias tan='tmux a -t newznab'
 fi
 
 # Conversion
