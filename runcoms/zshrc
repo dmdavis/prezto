@@ -60,6 +60,7 @@ alias piu='pip install -U'
 alias pm='python manage.py'
 alias fsp='python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"'
 alias rmpyc='rmr *.pyc'
+alias tls='tmux ls'
 
 # Mac OS X Specific
 if [[ "$OSTYPE" == darwin* ]]; then
@@ -112,7 +113,7 @@ elif [[ "$OS" == Fedora* ]]; then
     alias tap='tmux a -t platform'
     alias tas='tmux a -t serpng'
     alias taa='tmux a -t askbot'
-    alias tls='tmux ls'
+
 fi
 
 # Conversion
