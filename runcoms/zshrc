@@ -46,6 +46,8 @@ alias yolo='git push --force'
 alias gsm="grep path .gitmodules | sed 's/.*= //'"
 # Janus VIM profile update
 alias jvu='pushd .; cd ~/.vim; rake; popd'
+# .zprezto pull
+alias upzpr='pushd .; cd ~/.zprezto; git fetch; git rebase; popd'
 # misc shortcuts
 alias fsize='du -ch | grep total'
 alias hig='history | grep'
@@ -60,6 +62,7 @@ alias piu='pip install -U'
 alias pm='python manage.py'
 alias fsp='python -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())"'
 alias rmpyc='rmr *.pyc'
+# tmux
 alias tls='tmux ls'
 
 # Mac OS X Specific
