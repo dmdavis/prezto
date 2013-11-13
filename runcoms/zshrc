@@ -128,6 +128,7 @@ elif [[ "$OS" == Ubuntu* ]]; then
     alias dbds='sudo du -sh /mnt/lv2tb/'
     alias tnn='tmux new -s newznab'
     alias tan='tmux a -t newznab'
+    alias stnn='sudo $NZ/nix_scripts/newznab_local.sh'
 fi
 
 # Conversion
