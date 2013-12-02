@@ -49,6 +49,7 @@ if [[ "$OS" == Darwin* ]]; then
       'fasd' \
       'git' \
       'python' \
+      'ruby' \
       'homebrew' \
       'prompt'
 elif [[ "$OS" == Fedora* ]]; then
@@ -65,6 +66,7 @@ elif [[ "$OS" == Fedora* ]]; then
       'fasd' \
       'git' \
       'python' \
+      'ruby' \
       'yum' \
       'prompt'
 elif [[ "$OS" == Ubuntu* ]]; then
@@ -81,6 +83,7 @@ elif [[ "$OS" == Ubuntu* ]]; then
       'fasd' \
       'git' \
       'python' \
+      'rvm' \
       'dpkg' \
       'prompt'
 fi

@@ -92,11 +92,12 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias love="/Applications/love.app/Contents/MacOS/love"
         alias nn='ssh -i ~/.ssh/id_rsa_newznab dale@newznab.local'
     # Work Macbook Air
-    elif [[ `hostname -s` = "Dale-Mac-LT" ]]; then
+    elif [[ `hostname -s` = "dale-mac-lt" ]]; then
         alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
         alias dev1='ssh dale@xen-dale-1.ksjc.sh.colo'
         alias dev2='ssh dale@xen-dale-2.ksjc.sh.colo'
         alias stgc='ssh apps-community@xen-web-staging-1.ksjc.sh.colo'
+        alias vfl='ssh dale@xen-admin-100.ksjc.sh.colo'
         alias stgp='ssh apps-php-platform@xen-web-staging-1.ksjc.sh.colo'
         alias prdc0='ssh apps-community@task-100.ksjc.sh.colo'
         alias prdc1='ssh apps-community@task-101.ksjc.sh.colo'
@@ -193,5 +194,3 @@ elif [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
 elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
     source /usr/bin/virtualenvwrapper.sh
 fi
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
