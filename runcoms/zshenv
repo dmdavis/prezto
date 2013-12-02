@@ -59,7 +59,3 @@ if [[ "$OSTYPE" == darwin* ]]; then
         export PATH=/Users/dale/Qt5.1.1/5.1.1/clang_64/bin:$PATH
     fi
 fi
-
-if [[ -d $HOME/.rvm/bin ]]; then
-    PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-fi
