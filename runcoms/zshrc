@@ -91,6 +91,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias guapdf="/Users/dale/Tools/guapdf/guapdf"
         alias love="/Applications/love.app/Contents/MacOS/love"
         alias nn='ssh -i ~/.ssh/id_rsa_newznab dale@newznab.local'
+        alias mcs='/Users/dale/Minecraft/run_minecraft_server.sh'
     # Work Macbook Air
     elif [[ `hostname -s` = "dale-mac-lt" ]]; then
         alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
