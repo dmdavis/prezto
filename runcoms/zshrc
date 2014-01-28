@@ -51,6 +51,7 @@ alias upzpr='pushd .; cd ~/.zprezto; git fetch; git rebase; popd'
 # misc shortcuts
 alias fsize='du -ch | grep total'
 alias hig='history 1 | grep'
+alias ag='alias | grep'
 alias cd..='cd ..'
 alias cd...='cd ../..'
 # Python
