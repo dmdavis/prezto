@@ -81,6 +81,11 @@ if [[ "$OSTYPE" == darwin* ]]; then
         echo -e $'\e]9;'$1'\007'
     }
 
+    # WFH rsync and dev box stuff
+    alias rsphp='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/php-platform/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/php-platform/'
+    alias rsserp='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/web-serpng/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/web-serpng/'
+    alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
+
     # Home Macbook Pro
     if [[ `hostname -s` = "retina-pro" ]]; then
         # Troll
@@ -95,7 +100,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias mcs='/Users/dale/Minecraft/run_minecraft_server.sh'
     # Work Macbook Air
     elif [[ `hostname -s` = "dale-mac-lt" ]]; then
-        alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
         alias dev1='ssh dale@xen-dale-1.ksjc.sh.colo'
         alias dev2='ssh dale@xen-dale-2.ksjc.sh.colo'
         alias stgc='ssh apps-community@xen-web-staging-1.ksjc.sh.colo'
@@ -107,8 +111,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias sx='/Users/dale/Dropbox/Scripts/shell/sync_xen.sh'
         alias mysql='/Applications/MAMP/Library/bin/mysql'
         alias mysqladmin='/Applications/MAMP/Library/bin/mysqladmin'
-        alias rsphp='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/php-platform/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/php-platform/'
-        alias rsserp='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/web-serpng/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/web-serpng/'
         alias rsab='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/community/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/community/'
     fi
 elif [[ "$OS" == Fedora* ]]; then
