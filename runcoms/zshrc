@@ -81,13 +81,14 @@ if [[ "$OSTYPE" == darwin* ]]; then
         echo -e $'\e]9;'$1'\007'
     }
 
-    # WFH rsync and dev box stuff
+    # rsync
     alias rsphp='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/php-platform/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/php-platform/'
     alias rsserp='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/web-serpng/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/web-serpng/'
-    alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
+
+    local host_name=`hostname -s`
 
     # Home Macbook Pro
-    if [[ `hostname -s` = "retina-pro" ]]; then
+    if [[ $host_name:l == "retina-pro" ]]; then
         # Troll
         alias troll='/Users/dale/Source/_other/Troll_2013-03-22/troll'
         # Python aliases
@@ -98,8 +99,10 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias love="/Applications/love.app/Contents/MacOS/love"
         alias nn='ssh -i ~/.ssh/id_rsa_newznab dale@newznab.local'
         alias mcs='/Users/dale/Minecraft/run_minecraft_server.sh'
+        alias dev='ssh -i ~/.ssh/id_rsa_simplyhired dale@xen-dale-1.ksjc.sh.colo'
     # Work Macbook Air
-    elif [[ `hostname -s` = "dale-mac-lt" ]]; then
+    elif [[ $host_name:l == "dale-mac-lt" ]]; then
+        alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
         alias dev1='ssh dale@xen-dale-1.ksjc.sh.colo'
         alias dev2='ssh dale@xen-dale-2.ksjc.sh.colo'
         alias stgc='ssh apps-community@xen-web-staging-1.ksjc.sh.colo'
