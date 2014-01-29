@@ -128,6 +128,7 @@ elif [[ "$OS" == Fedora* ]]; then
     alias tap='tmux a -t platform'
     alias tas='tmux a -t serpng'
     alias taa='tmux a -t askbot'
+    alias pel='tail -F ~/php-platform/logs/$(date +%Y%m%d-%H)-simplyhired.errors'
 elif [[ "$OS" == Ubuntu* ]]; then
     alias db='~/.dropbox/dropbox.py'
     NZ='/var/www/newznab/misc/update_scripts'
