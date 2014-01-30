@@ -47,7 +47,7 @@ alias gsm="grep path .gitmodules | sed 's/.*= //'"
 # Janus VIM profile update
 alias jvu='pushd .; cd ~/.vim; rake; popd'
 # .zprezto pull
-alias upzpr='pushd .; cd ~/.zprezto; git fetch; git rebase; popd'
+alias upzpr='pushd .; cd ~/.zprezto; git fetch; git rebase; popd; source ~/.zshrc'
 # misc shortcuts
 alias fsize='du -ch | grep total'
 alias hig='history 1 | grep'
