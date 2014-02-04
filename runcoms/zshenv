@@ -54,6 +54,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
         # CUDA - Homebrew will complain about DYLD_LIBRARY_PATH being set
         # export DYLD\_LIBRARY\_PATH=/usr/local/cuda/lib:\$DYLD\_LIBRARY\_PATH
         # GUAPDF - Uncomment the CUDA lib path above for GPU-optimized version
+        # Qt 5.2
+        export PATH=/Users/dale/Qt5.2.0/5.2.0/clang_64/bin:$PATH
     elif [[ $HOSTNAME = "dale-mac-lt" ]]; then
         # Qt 5.1.1
         export PATH=/Users/dale/Qt5.1.1/5.1.1/clang_64/bin:$PATH
