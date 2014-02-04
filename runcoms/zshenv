@@ -44,7 +44,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
     # Java location
     export JAVA_HOME=$(/usr/libexec/java_home)
     
-    if [[ $HOSTNAME = "retina-pro" ]]; then
+    if [[ $HOSTNAME:l == "retina-pro" ]]; then
         # Moscow SML 2.10
         export PATH=/Users/dale/Tools/mosml2.10/bin:$PATH
         # MAME
@@ -55,8 +55,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
         # export DYLD\_LIBRARY\_PATH=/usr/local/cuda/lib:\$DYLD\_LIBRARY\_PATH
         # GUAPDF - Uncomment the CUDA lib path above for GPU-optimized version
         # Qt 5.2
-        export PATH=/Users/dale/Qt5.2.0/5.2.0/clang_64/bin:$PATH
-    elif [[ $HOSTNAME = "dale-mac-lt" ]]; then
+        export PATH=/Users/dale/Tools/Qt5.2.0/5.2.0/clang_64/bin:$PATH
+    elif [[ $HOSTNAME:l == "dale-mac-lt" ]]; then
         # Qt 5.1.1
         export PATH=/Users/dale/Qt5.1.1/5.1.1/clang_64/bin:$PATH
         export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
