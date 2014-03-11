@@ -111,6 +111,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias prdc2='ssh apps-community@task-102.ksjc.sh.colo'
         alias sx='/Users/dale/Dropbox/Scripts/shell/sync_xen.sh'
         alias rsab='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/community/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/community/'
+        function ksjc() {
+            ssh -A dale@$1.ksjc.sh.colo
+        }
     fi
 elif [[ "$OS" == Fedora* ]]; then
     # php-platform/web-serpng Shortcuts
