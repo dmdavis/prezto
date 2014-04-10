@@ -98,6 +98,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias nn='ssh -i ~/.ssh/id_rsa_newznab dale@newznab.local'
         alias mcs='/Users/dale/Minecraft/run_minecraft_server.sh'
         alias dev='ssh -i ~/.ssh/id_rsa_simplyhired dale@xen-dale-1.ksjc.sh.colo'
+        alias insom='ssh dale_insomnihack@ssh.phx.nearlyfreespeech.net'
     # Work Macbook Air
     elif [[ $HOSTNAME:l == "dale-mac-lt" ]]; then
         alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
