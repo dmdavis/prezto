@@ -203,3 +203,6 @@ elif [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
 elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
     source /usr/bin/virtualenvwrapper.sh
 fi
+
+# VIM keyboard mode
+bindkey -v
