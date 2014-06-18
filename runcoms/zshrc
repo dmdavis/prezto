@@ -121,10 +121,9 @@ elif [[ "$OS" == Fedora* ]]; then
     # php-platform/web-serpng Shortcuts
     alias phps='cd ~/php-platform; sudo ./run.sh'
     alias phpx='sudo /sbin/service httpd stop'
-    alias serp='cd ~/web-serpng; workon web-serpng; /home/dale/Dropbox/Scripts/sh/run-web-serpng.sh'
     alias askbot='cd ~/community/code/community; workon askbot; python manage.py runserver 0.0.0.0:9005'
     alias tnp='tmux new -s platform'
-    alias tns='tmux new -s serpng'
+    alias tns='tmux new -s serpng; source ~/Dropbox/Scripts/sh/serp_env.sh'
     alias tna='tmux new -s askbot'
     alias tap='tmux a -t platform'
     alias tas='tmux a -t serpng'
