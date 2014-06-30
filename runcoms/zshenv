@@ -27,6 +27,7 @@ export DEFAULT_USER='dale'
 export HOSTNAME=`hostname -s`
 export PROJECT_HOME="$HOME/Source"
 export SCRIPTS="$HOME/Dropbox/Scripts"
+export HOMEBREW_EDITOR=/usr/local/bin/mate
 
 if [[ -d $HOME/Tools ]]; then
     # HandBrakeCLI, git-submodule-move etc.
@@ -60,6 +61,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
     elif [[ $HOSTNAME:l == "dale-mac-lt" ]]; then
         export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
     fi
-    # Qt 5.2.1
-    export PATH=/Users/dale/Tools/Qt5.2.0/5.2.0/clang_64/bin:$PATH
+    # Qt 5.3.1
+    export PATH=/Users/dale/Tools/Qt5.3.1/5.3.1/clang_64/bin:$PATH
 fi
