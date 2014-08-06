@@ -9,7 +9,6 @@
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
-
 ##############################################################################
 
 # Set VIRTUALENVWRAPPER_PYTHON to the path of the Python executable that
@@ -59,7 +58,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
         # ImageOptim-CLI
         export PATH=/Users/dale/Source/_github/ImageOptim-CLI/bin:$PATH
     elif [[ $HOSTNAME:l == "dale-mac-lt" ]]; then
-        export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
+        export PATH="$(brew --prefix homebrew/php/php53)/bin:$PATH"
     fi
     # Qt 5.3.1
     export PATH=/Users/dale/Tools/Qt5.3.1/5.3.1/clang_64/bin:$PATH
