@@ -220,3 +220,9 @@ fi
 
 # VIM keyboard mode
 bindkey -v
+
+# Home Macbook Pro
+if [[ $HOSTNAME:l == "retina-pro" ]]; then
+    # Fix enter on numeric keypad in iTerm 2 with zsh
+    bindkey -s "^[OM" "^M"
+fi

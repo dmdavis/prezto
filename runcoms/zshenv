@@ -57,9 +57,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
         
         # ImageOptim-CLI
         export PATH=/Users/dale/Source/_github/ImageOptim-CLI/bin:$PATH
-        
-        # Fix enter on numeric keypad in iTerm 2 with zsh
-        bindkey -s "^[OM" "^M"
+
     elif [[ $HOSTNAME:l == "dale-mac-lt" ]]; then
         export PATH="$(brew --prefix homebrew/php/php53)/bin:$PATH"
     fi
