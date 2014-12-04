@@ -151,6 +151,9 @@ elif [[ "$OS" == Fedora* ]]; then
     alias taa='tmux a -t askbot'
     alias pel='tail -F ~/php-platform/logs/$(date +%Y%m%d-%H)-simplyhired.errors'
     export SERPNG_ROOT='/home/dale/web-serpng'
+    function pmt() {
+      python manage.py test serpng.$1 --settings=serpng.settings.test
+    }
 elif [[ "$OS" == Ubuntu* ]]; then
     alias db='~/.dropbox/dropbox.py'
     NZ='/var/www/newznab/misc/update_scripts'
