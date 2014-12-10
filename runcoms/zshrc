@@ -200,7 +200,7 @@ function upall {
 function title {
     echo -ne "\e]1;$1\a"
 }
-# Save active virtualenv's 
+# Save active virtualenv's
 function venvreqs {
     venvname=`echo $VIRTUAL_ENV | awk -F/ '{print $NF}'`
     if [[ -n $venvname ]]; then
