@@ -69,7 +69,7 @@ elif [[ "$OS" == Fedora* ]]; then
       'ruby' \
       'yum' \
       'prompt'
-elif [[ "$OS" == Ubuntu* ]]; then
+else  # Debian, Ubuntu, Linux Mint, and other apt-based distros
     zstyle ':prezto:load' pmodule \
       'environment' \
       'terminal' \

@@ -1,4 +1,4 @@
-#
+##############################################################################
 # Executes commands at the start of an interactive session.
 #
 # Authors:
@@ -220,6 +220,8 @@ elif [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
     source /usr/local/share/python/virtualenvwrapper.sh
 elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
     source /usr/bin/virtualenvwrapper.sh
+elif [ -f /etc/bash_completion.d/virtualenvwrapper ]; then
+    source /etc/bash_completion.d/virtualenvwrapper
 fi
 
 # VIM keyboard mode
