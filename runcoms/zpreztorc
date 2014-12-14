@@ -83,7 +83,6 @@ else  # Debian, Ubuntu, Linux Mint, and other apt-based distros
       'fasd' \
       'git' \
       'python' \
-      'rvm' \
       'dpkg' \
       'prompt'
 fi

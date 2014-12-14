@@ -220,8 +220,8 @@ elif [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
     source /usr/local/share/python/virtualenvwrapper.sh
 elif [ -f /usr/bin/virtualenvwrapper.sh ]; then
     source /usr/bin/virtualenvwrapper.sh
-elif [ -f /etc/bash_completion.d/virtualenvwrapper ]; then
-    source /etc/bash_completion.d/virtualenvwrapper
+elif [ -f /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]; then
+    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
 
 # VIM keyboard mode
