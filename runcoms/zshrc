@@ -142,7 +142,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
     fi
 elif [[ "$OS" == Fedora* ]]; then
     # php-platform/web-serpng Shortcuts
-    alias phps='~/runphp.sh'
+    alias phps='sudo ~/runphp.sh'
     alias phpx='sudo /sbin/service httpd stop'
     alias tnp='tmux new -s platform'
     alias tns='tmux new -s serpng;'
