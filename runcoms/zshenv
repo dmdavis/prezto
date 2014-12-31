@@ -61,6 +61,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
     elif [[ $HOSTNAME:l == "dale-mac-lt" ]]; then
         export PATH="$(brew --prefix homebrew/php/php53)/bin:$PATH"
     fi
-    # Qt 5.3.2
-    export PATH=/Users/dale/Tools/Qt5.3.2/5.3.2/clang_64/bin:$PATH
+    # Qt 5.4.0
+    export PATH=/Users/dale/Tools/Qt5.4.0/5.4.0/clang_64/bin:$PATH
 fi
