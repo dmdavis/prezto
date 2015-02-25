@@ -96,7 +96,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
     alias mkve3='mkvirtualenv --python=/usr/local/bin/python3'
     # Site packages are located in:
     # /usr/local/Cellar/python3/3.3.2/Frameworks/Python.framework/Versions/3.3/lib/python3.3/site-packages
-    alias psql='/Applications/Postgres93.app/Contents/MacOS/bin/psql'
+    alias psql='/Applications/Postgres.app/Contents/Versions/9.4/bin/psql'
 
     # Growl
     function growl {
