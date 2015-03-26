@@ -37,9 +37,6 @@ alias ll='ls -l'
 alias lla='ls -la'
 alias lld='ls -ld */'
 alias lsx="find . -type f | sed -e 's/.*\.//' | sort | uniq -c | sort -rn"
-# date shortcuts
-alias gmt="date -u"
-alias utc='date -u'
 # git
 alias wip='git add .; git commit -m "wip"'
 alias yolo='git push --force'

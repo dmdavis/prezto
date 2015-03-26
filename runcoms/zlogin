@@ -23,6 +23,10 @@
 
 ##############################################################################
 
+# date shortcuts
+alias gmt="date -u"
+alias utc='date -u'
+
 if [[ "$OSTYPE" == darwin* ]]; then
     fortune | cowsay | lolcat
 fi
