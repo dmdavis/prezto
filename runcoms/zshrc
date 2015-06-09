@@ -120,6 +120,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias insom='ssh dale_insomnihack@ssh.phx.nearlyfreespeech.net'
         alias barb='ssh dale_barbdahlgren@ssh.phx.nearlyfreespeech.net'
         alias shelly='ssh dale_sophiasmommy@ssh.phx.nearlyfreespeech.net'
+        alias ts='"/Applications/TeamSpeak 3 Client.app/Contents/MacOS/ts3client_mac" -nosingleinstance'
     # Work Macbook Air
     elif [[ $HOSTNAME:l == "dale-mac-lt" ]]; then
         alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
