@@ -231,3 +231,12 @@ if [[ $HOSTNAME:l == "retina-pro" ]]; then
     # Fix enter on numeric keypad in iTerm 2 with zsh
     bindkey -s "^[OM" "^M"
 fi
+
+# Anonymous function to load machine-specific aliases and functions without
+# polluting the global namespace.
+function {
+    local host_specific_script="$HOME/Dropbox/Scripts/shell/$HOSTNAME.sh"
+    if [[ -e "$host_specific_script" ]]; then
+        . $host_specific_script
+    fi
+}
