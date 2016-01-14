@@ -22,11 +22,11 @@ else
     export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
 fi
 
-export DEFAULT_USER='dale'
+export DEFAULT_USER=`whoami`
 export HOSTNAME=`hostname -s`
 export PROJECT_HOME="$HOME/Source"
 export SCRIPTS="$HOME/Dropbox/Scripts"
-export HOMEBREW_EDITOR=/usr/local/bin/mate
+export HOMEBREW_EDITOR=/usr/bin/nano
 
 if [[ -d $HOME/Tools ]]; then
     # HandBrakeCLI, git-submodule-move etc.
@@ -57,10 +57,5 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
         # ImageOptim-CLI
         export PATH=/Users/dale/Source/_github/ImageOptim-CLI/bin:$PATH
-
-    elif [[ $HOSTNAME:l == "dale-mac-lt" ]]; then
-        export PATH="$(brew --prefix homebrew/php/php53)/bin:$PATH"
     fi
-    # Qt 5.4.1
-    export PATH=/Users/dale/Tools/Qt5.4.1/5.4/clang_64/bin:$PATH
 fi

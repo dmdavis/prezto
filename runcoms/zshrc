@@ -121,39 +121,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
         alias barb='ssh dale_barbdahlgren@ssh.phx.nearlyfreespeech.net'
         alias shelly='ssh dale_sophiasmommy@ssh.phx.nearlyfreespeech.net'
         alias ts='"/Applications/TeamSpeak 3 Client.app/Contents/MacOS/ts3client_mac" -nosingleinstance'
-    # Work Macbook Air
-    elif [[ $HOSTNAME:l == "dale-mac-lt" ]]; then
-        alias dev='ssh dale@xen-dale-1.ksjc.sh.colo'
-        alias dev1='ssh dale@xen-dale-1.ksjc.sh.colo'
-        alias dev2='ssh dale@xen-dale-2.ksjc.sh.colo'
-        alias stgc='ssh apps-community@xen-web-staging-1.ksjc.sh.colo'
-        alias vfl='ssh dale@xen-admin-100.ksjc.sh.colo'
-        alias stgp='ssh apps-php-platform@xen-web-staging-1.ksjc.sh.colo'
-        alias prdc0='ssh apps-community@task-100.ksjc.sh.colo'
-        alias prdc1='ssh apps-community@task-101.ksjc.sh.colo'
-        alias prdc2='ssh apps-community@task-102.ksjc.sh.colo'
-        alias sx='/Users/dale/Dropbox/Scripts/shell/sync_xen.sh'
-        alias vw="bundle exec veewee"
-        alias rsab='rsync -avz --exclude ".git" --exclude ".idea" --exclude "*.pyc" /Users/dale/Source/community/ dale@xen-dale-1.ksjc.sh.colo:/home/dale/community/'
-        function ksjc() {
-            ssh -A dale@$1.ksjc.sh.colo
-        }
     fi
-elif [[ "$OS" == Fedora* ]]; then
-    # php-platform/web-serpng Shortcuts
-    alias phps='sudo ~/runphp.sh'
-    alias phpx='sudo /sbin/service httpd stop'
-    alias tnp='tmux new -s platform'
-    alias tns='tmux new -s serpng;'
-    alias tna='tmux new -s askbot'
-    alias tap='tmux a -t platform'
-    alias tas='tmux a -t serpng'
-    alias taa='tmux a -t askbot'
-    alias pel='tail -F ~/php-platform/logs/$(date +%Y%m%d-%H)-simplyhired.errors'
-    export SERPNG_ROOT='/home/dale/web-serpng'
-    function pmt() {
-      python manage.py test serpng.$1 --settings=serpng.settings.test
-    }
 elif [[ "$OS" == Ubuntu* ]]; then
     alias db='~/.dropbox/dropbox.py'
     NZ='/var/www/newznab/misc/update_scripts'
