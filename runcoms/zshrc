@@ -91,8 +91,9 @@ function zsh_venv_on_postdeactivate {
 
 # Mac OS X Specific
 if [[ "$OSTYPE" == darwin* ]]; then
-    alias ep='mate ~/Dropbox/Scripts'
+    alias ep="mate $HOME/Dropbox/Scripts"
     alias mft='find . -name Makefile | xargs trash'
+	alias dash="$HOME/Dropbox/Scripts/python/dash.py"
     # Python 3
     alias mkve3='mkvirtualenv --python=/usr/local/bin/python3'
     # Site packages are located in:
